@@ -17,12 +17,12 @@
             background-color: #f7f4eb;
             /* 日式手帳經典方格紙背景 */
             background-image: 
-                linear-gradient(rgba(220, 215, 200, 0.5) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(220, 215, 200, 0.5) 1px, transparent 1px);
-            background-size: 20px 20px;
+                linear-gradient(rgba(220, 215, 200, 0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(220, 215, 200, 0.4) 1px, transparent 1px);
+            background-size: 22px 22px;
             font-family: 'Kosugi Maru', 'Noto Sans TC', sans-serif;
-            color: #4a3e3d;
-            padding-bottom: 60px;
+            color: #3a3232;
+            padding-bottom: 80px;
         }
 
         /* 頂部手繪橫幅 */
@@ -31,8 +31,8 @@
             max-width: 600px;
             margin: 0 auto;
             background: #fff;
-            padding: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
             border-bottom: 3px dashed #b5a491;
         }
         .banner-container img {
@@ -49,37 +49,37 @@
             padding: 16px;
         }
 
-        /* 拍立得手繪風：今日天氣看板 */
+        /* 拍立得日系實景天氣看板 */
         .weather-card {
             background: #fff;
-            padding: 15px 15px 30px 15px; /* 底部留白像拍立得 */
-            border-radius: 4px;
-            box-shadow: 3px 3px 12px rgba(0,0,0,0.08);
-            border: 2px solid #5c4f4d;
+            padding: 12px 12px 24px 12px;
+            border-radius: 6px;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.06);
+            border: 2px solid #4a3e3d;
             margin-bottom: 25px;
             position: relative;
-            transform: rotate(-1deg); /* 微微傾斜更有手寫感 */
+            transform: rotate(-0.5deg);
         }
-        /* 裝飾紙膠帶 */
+        /* 裝飾文具紙膠帶 */
         .weather-card::before {
             content: "";
             position: absolute;
-            top: -12px;
+            top: -10px;
             left: 35%;
             width: 30%;
-            height: 24px;
-            background: rgba(219, 199, 164, 0.7);
-            transform: rotate(2deg);
-            border-left: 2px dashed rgba(0,0,0,0.1);
-            border-right: 2px dashed rgba(0,0,0,0.1);
+            height: 20px;
+            background: rgba(224, 204, 173, 0.75);
+            transform: rotate(1deg);
+            border-left: 2px dashed rgba(0,0,0,0.08);
+            border-right: 2px dashed rgba(0,0,0,0.08);
         }
         .weather-title {
-            font-size: 14pt;
+            font-size: 13pt;
             font-weight: bold;
             color: #8c6454;
             margin-bottom: 8px;
-            border-bottom: 2px dashed #dbd7cc;
-            padding-bottom: 5px;
+            border-bottom: 2px dashed #ece9e0;
+            padding-bottom: 6px;
         }
         .weather-info {
             display: flex;
@@ -87,235 +87,304 @@
             align-items: center;
         }
         .weather-temp {
-            font-size: 24pt;
+            font-size: 26pt;
             font-weight: bold;
             color: #d97d65;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .weather-temp span {
+            font-size: 16pt;
+            color: #736564;
         }
         .weather-detail {
             text-align: right;
             font-size: 10pt;
-            line-height: 1.4;
+            line-height: 1.5;
+            color: #594e4d;
         }
 
-        /* 手繪按鈕 */
+        /* 圓潤質感浮雕按鈕 */
         .btn-notebook {
             display: block;
             width: 100%;
-            background: #7fa69b; /* 日系草綠色 */
-            color: white;
+            background: #1e2538; /* 質感深藍色底 */
+            color: #f7f4eb;
             text-align: center;
-            padding: 14px;
+            padding: 15px;
             border-radius: 30px;
             font-size: 13pt;
             font-weight: bold;
             text-decoration: none;
             margin-bottom: 25px;
-            box-shadow: 0 4px 0px #5d7e75;
-            border: 2px solid #4a3e3d;
+            box-shadow: 0 4px 0px #0f131d;
+            border: 2px solid #1e2538;
             transition: all 0.1s;
             cursor: pointer;
+            letter-spacing: 1px;
         }
         .btn-notebook:active {
             transform: translateY(4px);
-            box-shadow: 0 0px 0px #5d7e75;
+            box-shadow: 0 0px 0px #0f131d;
         }
 
-        /* 手帳行程章節 */
+        /* 手帳行程日章節 */
         .day-section {
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid #5c4f4d;
-            border-radius: 12px;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #4a3e3d;
+            border-radius: 14px;
+            padding: 22px;
             margin-bottom: 25px;
             box-shadow: 4px 4px 0px #cfc9bc;
         }
         .day-header {
-            font-size: 15pt;
+            font-size: 14pt;
             font-weight: bold;
             color: #fff;
-            background: #8c6454; /* 焙茶棕 */
-            padding: 6px 16px;
+            background: #8c6454; /* 焙茶色 */
+            padding: 5px 18px;
             border-radius: 20px;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             border: 2px solid #4a3e3d;
         }
         
         /* 手帳時程線路徑 */
         .timeline-item {
             position: relative;
-            padding-left: 25px;
+            padding-left: 28px;
             border-left: 2px dashed #b5a491;
-            padding-bottom: 15px;
+            padding-bottom: 18px;
         }
         .timeline-item::before {
-            content: "✏️";
+            content: "🎒";
             position: absolute;
             left: -11px;
-            top: 0;
-            background: #f7f4eb;
+            top: -2px;
+            background: #fdfcf7;
             font-size: 11pt;
+            border-radius: 50%;
         }
+        .timeline-item.eating::before { content: "🍱"; }
+        .timeline-item.hotel::before { content: "🏨"; }
+        .timeline-item.scenery::before { content: "🗺️"; }
+        
         .time-tag {
-            font-size: 10pt;
+            font-size: 10.5pt;
             color: #d97d65;
             font-weight: bold;
+            background: #fff4f0;
+            padding: 1px 6px;
+            border-radius: 4px;
+            display: inline-block;
         }
         .spot-name {
-            font-size: 12pt;
+            font-size: 12.5pt;
             font-weight: bold;
-            margin: 2px 0 6px 0;
+            margin: 4px 0 6px 0;
+            color: #2b2525;
         }
         .spot-memo {
             font-size: 10pt;
-            color: #736564;
-            background: #fdfcf7;
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px dotted #ccc;
-            line-height: 1.4;
+            color: #615554;
+            background: #fdfdfa;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px dotted #c7c1b4;
+            line-height: 1.5;
         }
 
-        /* 彈出式：日式手繪記帳本 */
+        /* 影片同款高級感：彈出式記帳視窗 */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.5);
             display: none;
             justify-content: center;
             align-items: center;
             z-index: 1000;
             padding: 16px;
+            backdrop-filter: blur(3px);
         }
         .ledger-modal {
-            background: #fcfbf9;
+            background: #fbfbfa;
             width: 100%;
-            max-width: 450px;
-            border: 3px solid #4a3e3d;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            background-image: radial-gradient(#e8e4da 15%, transparent 15%);
-            background-size: 16px 16px;
+            max-width: 400px;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         .modal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px dashed #4a3e3d;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .modal-title {
-            font-size: 14pt;
+            font-size: 15pt;
             font-weight: bold;
-            color: #8c6454;
+            color: #1e2538;
         }
         .close-btn {
-            background: none;
+            background: #f0eeeb;
             border: none;
-            font-size: 18pt;
+            font-size: 14pt;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
             cursor: pointer;
-            color: #999;
+            color: #736564;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        /* 記帳表單輸入 */
+        /* 影片同款表單輸入樣式 */
         .form-group {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
         .form-group label {
             display: block;
-            font-size: 10pt;
-            font-weight: bold;
-            margin-bottom: 4px;
+            font-size: 9.5pt;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #736564;
         }
         .form-control {
             width: 100%;
-            padding: 10px;
-            border: 2px solid #b5a491;
-            border-radius: 8px;
+            padding: 12px 14px;
+            border: 1px solid #e0deda;
+            border-radius: 12px;
             font-family: inherit;
             font-size: 11pt;
             background: #fff;
-            color: #4a3e3d;
+            color: #1e2538;
             outline: none;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
         }
         .form-control:focus {
-            border-color: #7fa69b;
+            border-color: #1e2538;
         }
-        .currency-selector {
+        
+        /* 影片同款高級雙色切換鈕 */
+        .amount-container {
+            position: relative;
+        }
+        .currency-toggle-box {
             display: flex;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-        .currency-btn {
-            flex: 1;
-            padding: 8px;
-            border: 2px solid #b5a491;
-            background: #fff;
+            background: #f0eeeb;
+            padding: 3px;
             border-radius: 8px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            gap: 2px;
+        }
+        .currency-tab {
+            font-size: 8.5pt;
+            padding: 4px 8px;
+            border: none;
+            background: transparent;
+            border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
+            color: #736564;
             font-family: inherit;
         }
-        .currency-btn.active {
-            background: #e3ede9;
-            border-color: #7fa69b;
-            color: #4e6b62;
+        .currency-tab.active {
+            background: #fff;
+            color: #d97d65;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* 儲存按鈕 */
-        .submit-btn {
-            width: 100%;
-            background: #d97d65;
-            color: white;
-            border: 2px solid #4a3e3d;
-            padding: 12px;
-            border-radius: 25px;
-            font-size: 12pt;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 3px 0 #9c513e;
-            font-family: inherit;
+        .amount-input-wrapper {
+            position: relative;
         }
-        .submit-btn:active {
-            transform: translateY(2px);
-            box-shadow: 0 1px 0 #9c513e;
-        }
-
-        /* 帳目顯示清單 */
-        .history-title {
+        .amount-symbol {
+            position: absolute;
+            left: 14px;
+            top: 12px;
             font-size: 11pt;
             font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 8px;
+            color: #736564;
+        }
+        .form-control.amount-field {
+            padding-left: 32px;
+        }
+
+        /* 影片同款大條儲存按鈕 */
+        .submit-btn {
+            width: 100%;
+            background: #1e2538;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 14px;
+            font-size: 11pt;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: inherit;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        .submit-btn:active {
+            background: #0f131d;
+        }
+
+        /* 記帳清單顯示 */
+        .history-title {
+            font-size: 10.5pt;
+            font-weight: bold;
+            margin-top: 22px;
+            margin-bottom: 10px;
             color: #8c6454;
             display: flex;
             justify-content: space-between;
+            border-top: 1px dashed #e0deda;
+            padding-top: 15px;
         }
         .expense-list {
-            max-height: 180px;
+            max-height: 150px;
             overflow-y: auto;
-            border: 2px solid #dbd7cc;
             background: #fff;
-            border-radius: 8px;
-            padding: 8px;
+            border-radius: 12px;
+            padding: 6px 12px;
+            border: 1px solid #e0deda;
         }
         .expense-item {
             display: flex;
             justify-content: space-between;
-            padding: 6px 0;
-            border-bottom: 1px dashed #eee;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #f0eeeb;
             font-size: 10pt;
         }
         .expense-item:last-child {
             border-bottom: none;
         }
+        .expense-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .payer-badge {
+            font-size: 7.5pt;
+            background: #ece9e2;
+            color: #615554;
+            padding: 1px 5px;
+            border-radius: 4px;
+            width: fit-content;
+        }
         .delete-item {
-            color: #d97d65;
+            color: #cfc2b8;
             cursor: pointer;
-            margin-left: 8px;
-            font-weight: bold;
+            margin-left: 10px;
+            font-size: 12pt;
+        }
+        .delete-item:hover {
+            color: #d97d65;
         }
     </style>
 </head>
@@ -330,9 +399,9 @@
         <div class="weather-card">
             <div class="weather-title">今日天氣預報 (8/25) 📍 名古屋</div>
             <div class="weather-info">
-                <div class="weather-temp">31°C</div>
+                <div class="weather-temp">31°C <span>🌧️</span></div>
                 <div class="weather-detail">
-                    🌧️ 局部陣雨<br>
+                    局部陣雨與雷雨<br>
                     體感溫度: 34°C<br>
                     降雨機率: 60%
                 </div>
@@ -344,38 +413,44 @@
         <div class="day-section">
             <div class="day-header">Day 1 · 啟程與名古屋</div>
             
-            <div class="timeline-item">
+            <div class="timeline-item scenery">
                 <div class="time-tag">12:00</div>
                 <div class="spot-name">桃園機場 ➔ 中部國際機場</div>
-                <div class="spot-memo">搭乘安全舒適的航班，抵達後先至名鐵窗口兌換五日周遊券。</div>
+                <div class="spot-memo">搭乘安全舒適的航班，抵達後先至名鐵窗口領取或兌換五日周遊券。</div>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item hotel">
                 <div class="time-tag">16:00</div>
                 <div class="spot-name">名古屋市區飯店 Check-in</div>
-                <div class="spot-memo">放好隨身行李，稍微休息，準備帶小寶貝散步去吃晚餐。</div>
+                <div class="spot-memo">辦理入住放好行李，稍微休息擦個汗，準備出門散步享受名古屋夜色。</div>
             </div>
 
-            <div class="timeline-item" style="padding-bottom: 0;">
+            <div class="timeline-item eating" style="padding-bottom: 0;">
                 <div class="time-tag">18:30</div>
                 <div class="spot-name">晚餐：名物鰻魚飯三吃</div>
-                <div class="spot-memo">推薦：蓬萊軒或備長鰻魚飯。記得體驗三種不同茶泡飯風味！</div>
+                <div class="spot-memo">品嚐道地的「鰻木桶三吃」（蓬萊軒或備長鰻魚飯）。記得體驗原味、加配料與茶泡飯三種極致吃法！</div>
             </div>
         </div>
 
         <div class="day-section">
-            <div class="day-header">Day 2 · 童話合掌村</div>
+            <div class="day-header">Day 2 · 高山與童話合掌村</div>
             
-            <div class="timeline-item">
+            <div class="timeline-item scenery">
                 <div class="time-tag">09:00</div>
-                <div class="spot-name">搭乘濃飛巴士 ➔ 白川鄉合掌村</div>
-                <div class="spot-memo">沿途欣賞壯麗的山林風光，大約2.5小時車程，孩子可在車上小憩。</div>
+                <div class="spot-name">搭乘濃飛巴士 ➔ 飛驒高山</div>
+                <div class="spot-memo">沿途飽覽壯麗的日本阿爾卑斯山林風光，車程約2.5小時，孩子可以在車上補眠。</div>
             </div>
 
-            <div class="timeline-item" style="padding-bottom: 0;">
-                <div class="time-tag">12:30</div>
-                <div class="spot-name">合掌村散策、展望台</div>
-                <div class="spot-memo">漫步於夢幻的茅草屋群。午餐品嚐在地飛驒牛串燒與五平餅。</div>
+            <div class="timeline-item scenery">
+                <div class="time-tag">11:30</div>
+                <div class="spot-name">飛驒高山老街散策</div>
+                <div class="spot-memo">漫步古色古香的江戶風情木造老街。午餐必吃現烤飛驒牛串燒、飛驒牛握壽司！</div>
+            </div>
+
+            <div class="timeline-item scenery" style="padding-bottom: 0;">
+                <div class="time-tag">14:00</div>
+                <div class="spot-name">白川鄉合掌村 ➔ 展望台</div>
+                <div class="spot-memo">轉乘接駁巴士登上城山展望台，眺望如童話故事般夢幻的茅草合掌造聚落，合影留念。</div>
             </div>
         </div>
 
@@ -384,39 +459,53 @@
     <div class="modal-overlay" id="ledgerModal">
         <div class="ledger-modal">
             <div class="modal-header">
-                <div class="modal-title">🖋️ 旅費支出手帳本</div>
+                <div class="modal-title">新增支出</div>
                 <button class="close-btn" onclick="closeLedger()">×</button>
             </div>
             
-            <div class="currency-selector">
-                <button class="currency-btn active" id="btnJPY" onclick="setCurrency('JPY')">JPY ¥</button>
-                <button class="currency-btn" id="btnTWD" onclick="setCurrency('TWD')">TWD $</button>
-            </div>
-
             <div class="form-group">
                 <label>項目名稱</label>
-                <input type="text" id="itemName" class="form-control" placeholder="例如：飛驒牛串燒、伴手禮">
+                <input type="text" id="itemName" class="form-control" placeholder="例如：六花亭伴手禮">
             </div>
-            <div class="form-group">
+
+            <div class="form-group amount-container">
                 <label>金額</label>
-                <input type="number" id="itemAmount" class="form-control" placeholder="0" inputmode="numeric">
+                <div class="currency-toggle-box">
+                    <button class="currency-tab active" id="tabJPY" onclick="setCurrency('JPY')">JPY ¥</button>
+                    <button class="currency-tab" id="tabTWD" onclick="setCurrency('TWD')">TWD $</button>
+                </div>
+                <div class="amount-input-wrapper">
+                    <span class="amount-symbol" id="currencySymbol">¥</span>
+                    <input type="number" id="itemAmount" class="form-control amount-field" placeholder="0" inputmode="numeric">
+                </div>
             </div>
-            <div class="form-group">
-                <label>分類</label>
-                <select id="itemCategory" class="form-control">
-                    <option value="餐飲">🍱 餐飲美食</option>
-                    <option value="交通">交通車票</option>
-                    <option value="門票">🎟️ 景點門票</option>
-                    <option value="購物">🛍️ 購物血拼</option>
-                    <option value="其他">✏️ 其他支出</option>
-                </select>
+
+            <div style="display: flex; gap: 12px;">
+                <div class="form-group" style="flex: 1;">
+                    <label>🏷️ 分類</label>
+                    <select id="itemCategory" class="form-control">
+                        <option value="餐飲">餐飲</option>
+                        <option value="交通">交通</option>
+                        <option value="門票">門票</option>
+                        <option value="購物">購物</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>👤 付款人</label>
+                    <select id="itemPayer" class="form-control">
+                        <option value="Jeffrey">Jeffrey</option>
+                        <option value="全家公費">全家公費</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
             </div>
 
             <button class="submit-btn" onclick="addRecord()">儲存紀錄</button>
 
             <div class="history-title">
-                <span>📋 本次已記帳清單</span>
-                <span id="totalDisplay" style="color: #d97d65;">總計: ¥0</span>
+                <span>📋 記帳明細歷史</span>
+                <span id="totalDisplay" style="color: #d97d65; font-weight: bold;">總計: ¥0</span>
             </div>
             <div class="expense-list" id="expenseList">
                 </div>
@@ -438,17 +527,19 @@
 
         function setCurrency(curr) {
             currentCurrency = curr;
-            document.getElementById('btnJPY').classList.toggle('active', curr === 'JPY');
-            document.getElementById('btnTWD').classList.toggle('active', curr === 'TWD');
+            document.getElementById('tabJPY').classList.toggle('active', curr === 'JPY');
+            document.getElementById('tabTWD').classList.toggle('active', curr === 'TWD');
+            document.getElementById('currencySymbol').innerText = curr === 'JPY' ? '¥' : '$';
         }
 
         function addRecord() {
             const name = document.getElementById('itemName').value.trim();
             const amount = parseFloat(document.getElementById('itemAmount').value);
             const category = document.getElementById('itemCategory').value;
+            const payer = document.getElementById('itemPayer').value;
 
             if (!name || isNaN(amount) || amount <= 0) {
-                alert('請填寫正確的項目名稱與金額喔！✏️');
+                alert('請輸入正確的項目名稱和金額唷！✨');
                 return;
             }
 
@@ -457,13 +548,14 @@
                 name: name,
                 amount: amount,
                 currency: currentCurrency,
-                category: category
+                category: category,
+                payer: payer
             };
 
             records.push(newRecord);
             localStorage.setItem('japan_trip_records', JSON.stringify(records));
             
-            // 清空輸入框
+            // 清空輸入
             document.getElementById('itemName').value = '';
             document.getElementById('itemAmount').value = '';
             
@@ -483,6 +575,12 @@
             let totalJPY = 0;
             let totalTWD = 0;
 
+            if (records.length === 0) {
+                listContainer.innerHTML = '<div style="text-align:center;color:#b5a491;padding:20px;font-size:9.5pt;">尚無記帳紀錄，開始記第一筆吧！</div>';
+                document.getElementById('totalDisplay').innerText = '總計: ¥0';
+                return;
+            }
+
             records.forEach(r => {
                 if (r.currency === 'JPY') totalJPY += r.amount;
                 if (r.currency === 'TWD') totalTWD += r.amount;
@@ -490,24 +588,27 @@
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'expense-item';
                 itemDiv.innerHTML = `
-                    <span>[${r.category}] ${r.name}</span>
-                    <span>${r.currency === 'JPY' ? '¥' : '$'}${r.amount.toLocaleString()} 
+                    <div class="expense-meta">
+                        <span style="font-weight:500;">${r.name}</span>
+                        <span class="payer-badge">${r.category} · ${r.payer}</span>
+                    </div>
+                    <span style="font-weight:bold;color:#1e2538;">
+                        ${r.currency === 'JPY' ? '¥' : '$'}${r.amount.toLocaleString()} 
                         <span class="delete-item" onclick="deleteRecord(${r.id})">×</span>
                     </span>
                 `;
                 listContainer.appendChild(itemDiv);
             });
 
-            // 顯示總計 (如果兩種幣別都有，就同時顯示)
             let totalText = '';
             if (totalJPY > 0 && totalTWD > 0) {
                 totalText = `¥${totalJPY.toLocaleString()} + $${totalTWD.toLocaleString()}`;
             } else if (totalJPY > 0) {
-                totalText = `總計: ¥${totalJPY.toLocaleString()}`;
+                totalText = `¥${totalJPY.toLocaleString()}`;
             } else {
-                totalText = `總計: $${totalTWD.toLocaleString()}`;
+                totalText = `$${totalTWD.toLocaleString()}`;
             }
-            document.getElementById('totalDisplay').innerText = totalText;
+            document.getElementById('totalDisplay').innerText = '總計: ' + totalText;
         }
     </script>
 </body>
